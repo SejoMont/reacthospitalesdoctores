@@ -4,6 +4,8 @@ import Home from "./rutasParametros/Home";
 import NotFound from "./rutasParametros/NotFound";
 import MenuRutas from "./MenuRutas";
 import CargarMedicos from "./CargarMedicos";
+import CrearHospital from "./CrearHospital";
+import ListaHospitales from "./ListaHospitales";
 
 export default class Router extends Component {
   render() {
@@ -19,8 +21,10 @@ export default class Router extends Component {
         <MenuRutas/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/crearHospital" element={<CrearHospital/>}/>
+          <Route path="/listaHospitales" element={<ListaHospitales/>}/>
           <Route path="/hospital/:hospital" element={<HospitalElement/>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     );
